@@ -30,6 +30,8 @@ public class scraper {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
 
+        /* I don't currently have a better solution than waiting for the page to refresh after the button is clicked.
+        * 3000 milliseconds works well enough for now*/
         Thread.sleep(3000);
 
         driver.get("https://news.web.nhk/newsweb/pl/news-nwa-latest-nationwide");
